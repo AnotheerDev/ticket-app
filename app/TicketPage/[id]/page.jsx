@@ -1,8 +1,6 @@
-import React from 'react'
-
 const TicketPage = ({ params }) => {
   return (
-    <div>TicketPage {param.id}</div>
+    <div>TicketPage {params.id}</div>
   )
 }
 
