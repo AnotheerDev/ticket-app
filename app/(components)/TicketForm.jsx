@@ -21,8 +21,8 @@ const TicketForm = () => {
     const res = await fetch("/api/Tickets", {
       method: "POST",
       body: JSON.stringify({ formData }),
-        "content-type": "application/json",
-    })
+      "content-type": "application/json",
+    });
 
     if (!res.ok) {
       throw new Error("Failed to create ticket");
@@ -49,7 +49,7 @@ const TicketForm = () => {
         onSubmit={handleSubmit}
       >
         <h3>Create your ticket</h3>
-        <label>Title</label>
+        <label htmlFor="title">Title</label>
         <input
           id="title"
           name="title"
@@ -59,7 +59,7 @@ const TicketForm = () => {
           required={true}
         />
 
-        <label>Description</label>
+        <label htmlFor="description">Description</label>
         <textarea
           id="description"
           name="description"
@@ -90,7 +90,7 @@ const TicketForm = () => {
             value="1"
             checked={formData.priority == 1}
           />
-          <label>1</label>
+          <label htmlFor="priority-1">1</label>
           <input
             id="priority-2"
             type="radio"
@@ -99,7 +99,7 @@ const TicketForm = () => {
             value="2"
             checked={formData.priority == 2}
           />
-          <label>2</label>
+          <label htmlFor="priority-2">2</label>
           <input
             id="priority-3"
             type="radio"
@@ -108,7 +108,7 @@ const TicketForm = () => {
             value="3"
             checked={formData.priority == 3}
           />
-          <label>3</label>
+          <label htmlFor="priority-3">3</label>
           <input
             id="priority-4"
             type="radio"
@@ -117,7 +117,7 @@ const TicketForm = () => {
             value="4"
             checked={formData.priority == 4}
           />
-          <label>4</label>
+          <label htmlFor="priority-4">4</label>
           <input
             id="priority-5"
             type="radio"
@@ -126,9 +126,9 @@ const TicketForm = () => {
             value="5"
             checked={formData.priority == 5}
           />
-          <label>5</label>
+          <label htmlFor="priority-5">5</label>
         </div>
-        <label> Progress</label>
+        <label htmlFor="progress"> Progress</label>
         <input
           type="range"
           id="progress"
